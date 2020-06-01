@@ -1,1 +1,1 @@
-# Competitive Programming :smile:
+# Competitive Programming :wink:
