@@ -10,7 +10,7 @@ def getInputs():
     return stamped, got
 
 def stampedLeft(stamped, got):
-    got = sort(got)
+    got.sort()
 
     stampedLeft = len(stamped)
 
@@ -19,32 +19,6 @@ def stampedLeft(stamped, got):
             stampedLeft -= 1
 
     return stampedLeft
-
-def sort(array):
-    n = len(array)
-
-    if n < 2:
-        return array
-    elif n == 2:
-        if int(array[0]) > int(array[1]):
-            array[0], array[1] = array[1], array[0]
-        return array
-    else:
-        return merge(sort(array[:n//2]), sort(array[n//2:]))
-
-def merge(array1, array2):
-    mergedList = []
-
-    while len(array1) > 0 and len(array2) > 0:
-        if int(array1[0]) < int(array2[0]):
-            mergedList.append(array1.pop(0))
-        else:
-            mergedList.append(array2.pop(0))
-
-    mergedList.extend(array1)
-    mergedList.extend(array2)
-
-    return mergedList
 
 def found(element, array):
     low = 0

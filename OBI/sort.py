@@ -24,7 +24,32 @@ def merge(sequence1, sequence2):
 
     return mergedSequence
 
+def test():
+    from random import randrange
+    from deltaTime import startMeasuringTime, deltaTime
 
-list1 = ["AAB", "A", "BB", "BBC"]
+    def getNewList(n):
+        newList = []
+        for i in range(n):
+            newList.append(randrange(1, n + 1))
 
-print(sort(list1))
+        return newList
+
+    totalTimeMergeSort, totalTimeSort = 0.0, 0.0
+
+    n = 100000
+    for i in range(100):
+        newList = getNewList(n)
+
+        startMeasuringTime()
+        sortedList1 = sort(newList)
+        totalTimeMergeSort += deltaTime()
+
+        startMeasuringTime()
+        sortedList2 = newList.sort()
+        totalTimeSort += deltaTime()
+
+    print("Merge sort: {:.20f}".format(totalTimeMergeSort))
+    print("Built-in sort: {:.20f}".format(totalTimeSort))
+
+test()
