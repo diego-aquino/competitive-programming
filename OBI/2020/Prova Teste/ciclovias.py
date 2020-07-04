@@ -48,18 +48,15 @@ def getNewPaths(paths, grid, n):
     for path in paths:
         for i in range(n):
             if grid[path[-1] - 1][i] == 1:
-                if (i + 1) not in path:
-                    newPaths.append(path + [i + 1])
+                newPaths.append(path + [i + 1])
 
     return newPaths
 
 def valid(path):
-    i = 0
-    while (i + 2) < len(path):
-        if path[i] >= path[i + 2]:
-            return False
+    n = len(path)
 
-        i += 1
+    if n > 2:
+        return path[-3] < path[-1]
 
     return True
 
