@@ -1,0 +1,23 @@
+
+"[Dracula]": {
+    "textMateRules": [
+        {
+            "scope": "variable.other.constant.object.js",
+            "settings": {
+                "foreground": "#F8F8F2",
+            }
+        },
+        {
+            "scope": "support.constant",
+            "settings": {
+                "foreground": "#F8F8F2",
+            }
+        },
+        {
+            "scope": "variable.parameter",
+            "settings": {
+                "fontStyle": ""
+            }
+        }
+    ]
+}
