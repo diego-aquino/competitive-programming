@@ -1,3 +1,3 @@
-# Competitive Programming, Algorithms, Data Structures... :wink:
+# Competitive Programming, Algorithms, Data Structures...
 
-This is a personal repository intent to store files and algorithmic solutions from my studies of competitive programming, algorithms and data structures.
+This is a personal repository intent to store files and algorithmic solutions from my studies of competitive programming, algorithms and data structures. :wink:
